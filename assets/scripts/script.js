@@ -8,8 +8,54 @@ menuToggle.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
-// Función para crear burbujas desde la parte más baja de la página
-function createBubble() {
+// Seleccionamos el separador y la mancha de agua
+const separator1 = document.querySelector('#separator1');
+const waterDrop = document.querySelector('#separator1 .water-drop');
+
+// Función para mover la "mancha de agua" con el cursor
+separator1.addEventListener('mousemove', (e) => {
+  const rect = separator1.getBoundingClientRect();
+  const x = e.clientX - rect.left; // Posición X relativa al separador
+  const y = e.clientY - rect.top;  // Posición Y relativa al separador
+
+  // Ajustar el background-position del gradiente en función de la posición del cursor
+  waterDrop.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5))`;
+});
+
+// Restaurar la posición de la mancha cuando el cursor sale de la sección
+separator1.addEventListener('mouseleave', () => {
+  waterDrop.style.background = `radial-gradient(circle at 50% 50%, rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5))`;
+});
+
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  
+  question.addEventListener('click', () => {
+    // Cerrar todos los demás elementos abiertos
+    faqItems.forEach(i => {
+      if (i !== item) {
+        i.classList.remove('active');
+        i.querySelector('.faq-answer').style.maxHeight = null;
+      }
+    });
+    
+    // Alternar el estado del elemento actual
+    item.classList.toggle('active');
+    
+    const answer = item.querySelector('.faq-answer');
+    if (item.classList.contains('active')) {
+      answer.style.maxHeight = answer.scrollHeight + "px"; // Expandir respuesta
+    } else {
+      answer.style.maxHeight = null; // Colapsar respuesta
+    }
+  });
+});
+
+// Crear burbujas solo en la sección Hero
+function createBubbleInHero() {
   const bubble = document.createElement('div');
   bubble.classList.add('bubble');
   
@@ -22,15 +68,16 @@ function createBubble() {
   
   bubble.classList.add(sizeClass, colorClass);
   
-  // Posicionar la burbuja aleatoriamente en la pantalla
+  // Posicionar la burbuja aleatoriamente en la pantalla dentro de Hero
   bubble.style.left = `${Math.random() * 100}%`;
-  document.querySelector('.bubbles').appendChild(bubble);
+  document.querySelector('#hero .bubbles').appendChild(bubble);
   
-  // Eliminar la burbuja después de 8 segundos
+  // Eliminar la burbuja después de 9 segundos
   setTimeout(() => {
     bubble.remove();
-  }, 9000);
+  }, 12000);
 }
 
-// Crear burbujas a intervalos ajustados
-setInterval(createBubble, 5);
+// Crear burbujas en intervalos ajustados dentro de Hero
+setInterval(createBubbleInHero, 50);
+
