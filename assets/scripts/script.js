@@ -27,6 +27,23 @@ separator1.addEventListener('mouseleave', () => {
   waterDrop.style.background = `radial-gradient(circle at 50% 50%, rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5))`;
 });
 
+// Función para detectar el movimiento del dedo en dispositivos táctiles
+separator1.addEventListener('touchmove', (e) => {
+  const rect = separator1.getBoundingClientRect();
+  const touch = e.touches[0]; // Obtiene el primer toque
+  const x = touch.clientX - rect.left; // Posición X relativa al separador
+  const y = touch.clientY - rect.top;  // Posición Y relativa al separador
+
+  // Ajustar el background-position del gradiente en función de la posición del toque
+  waterDrop.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5))`;
+});
+
+// Restaurar la posición de la mancha cuando se termina el toque
+separator1.addEventListener('touchend', () => {
+  waterDrop.style.background = `radial-gradient(circle at 50% 50%, rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5))`;
+});
+
+
 
 const faqItems = document.querySelectorAll('.faq-item');
 
