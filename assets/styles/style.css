@@ -1,4 +1,6 @@
-/* Reinicio y configuración global */
+/* ============================ */
+/* 1. Reinicio y configuración global */
+/* ============================ */
 body,
 html {
   margin: 0;
@@ -11,7 +13,9 @@ body {
   padding-top: 80px;
 }
 
-/* Header */
+/* ============================ */
+/* 2. Header */
+/* ============================ */
 header {
   position: fixed;
   top: 0;
@@ -26,26 +30,27 @@ header {
   transition: height 0.3s ease;
 }
 
-/* Flex container that allows even space distribution */
+/* Logo dentro del header */
 .logo {
   display: flex;
   align-items: center;
-  flex: 1; /* Allow the logo to take up equal space */
+  flex: 1;
 }
 
 .logo img {
-  width: 300px; /* Tamaño ajustado del logo */
+  width: 300px;
   height: auto;
-  margin-right: 10px; /* Añadimos espacio entre el logo y el borde */
+  margin-right: 10px;
 }
 
-/* Navegación */
-/* Navegación centrada */
+/* ============================ */
+/* 3. Navegación */
+/* ============================ */
 nav {
   display: flex;
-  justify-content: center; /* Alineamos al centro */
+  justify-content: center;
   align-items: center;
-  flex: 30; /* Allow the nav to take more space */
+  flex: 30;
 }
 
 nav ul {
@@ -66,18 +71,19 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-/* Efecto hover para los enlaces del menú */
 nav ul li a:hover {
-  color: #129e30; /* Cambiamos el color a un dorado brillante, puedes ajustarlo según tu preferencia */
+  color: #129e30;
   transition: color 0.2s ease;
 }
 
-/* Menú hamburguesa */
+/* ============================ */
+/* 4. Menú hamburguesa (Responsive) */
+/* ============================ */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  align-items: flex-end; /* Alineamos el menú hamburguesa a la derecha */
+  align-items: flex-end;
 }
 
 .menu-toggle span {
@@ -88,12 +94,9 @@ nav ul li a:hover {
   transition: all 0.3s ease;
 }
 
-/* Estilos para pantallas grandes */
-nav ul {
-  display: flex;
-}
-
-/* Estilos para las secciones */
+/* ============================ */
+/* 5. Sección Hero */
+/* ============================ */
 #hero {
   position: relative;
   height: calc(80vh - 80px);
@@ -116,18 +119,9 @@ nav ul {
   opacity: 0.8;
 }
 
-#second-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-
+/* ============================ */
+/* 6. Burbujas animadas */
+/* ============================ */
 #hero .bubbles {
   position: absolute;
   top: 1;
@@ -171,17 +165,19 @@ nav ul {
   background: rgba(3, 145, 228, 0.658);
 }
 
-/* Estilos para la mancha de agua que sigue al cursor */
+/* ============================ */
+/* 7. Primera sección con fondo */
+/* ============================ */
 #separator1 {
   position: relative;
-  height: calc(100vh - 80px); /* Ajusta según tus necesidades */
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden; /* Para que las manchas de agua no se salgan de los bordes */
-  background: #0b7c1ef6; /* Color de fondo de la sección */
+  overflow: hidden;
+  background: #0b7c1ef6;
 }
 
 #separator1 .water-drop {
@@ -203,17 +199,19 @@ nav ul {
 #separator1 h2,
 #separator1 p {
   position: relative;
-  z-index: 1; /* Asegura que el texto esté por encima de la mancha de agua */
-  color: #ffffff; /* Color del texto */
+  z-index: 1;
+  color: #ffffff;
 }
 
-/* Estilos para el segundo separador con 6 tarjetas */
+/* ============================ */
+/* 8. Sección de servicios */
+/* ============================ */
 .services-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-  gap: 20px; /* Espacio entre las tarjetas */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   padding: 40px;
-  background-color: #f7f7f7; /* Fondo claro */
+  background-color: #f7f7f7;
 }
 
 .service-card {
@@ -226,12 +224,12 @@ nav ul {
 }
 
 .service-card:hover {
-  transform: translateY(-10px); /* Efecto hover que eleva la tarjeta */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service-label {
-  background-color: #0a6b07; /* Color de fondo para la etiqueta */
+  background-color: #0a6b07;
   color: white;
   display: inline-block;
   padding: 5px 10px;
@@ -259,15 +257,17 @@ nav ul {
   margin-top: 10px;
 }
 
-/* Estilos para el separador de preguntas frecuentes (FAQ) */
+/* ============================ */
+/* 9. Sección FAQ */
+/* ============================ */
 .faq-section {
   padding: 40px;
-  background-color: #f7f7f7; /* Fondo claro */
+  background-color: #f7f7f7;
 }
 
 .faq h2 {
   text-align: center;
-  color: #377206; /* Color para el título */
+  color: #377206;
   margin-bottom: 20px;
 }
 
@@ -291,7 +291,7 @@ nav ul {
 }
 
 .faq-question:hover {
-  background-color: #f1f1f1; /* Cambia el fondo al pasar el cursor */
+  background-color: #f1f1f1;
 }
 
 .faq-answer {
@@ -312,38 +312,187 @@ nav ul {
   margin: 15px 0;
 }
 
-/* Efecto acordeón abierto */
 .faq-item.active .faq-answer {
-  max-height: 200px; /* Puedes ajustar según el contenido de la respuesta */
+  max-height: 200px;
 }
 
-/* Footer Styling */
+/* ============================ */
+/* 10. Footer */
+/* ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
 footer {
-  background-color: #055dc293; /* Matching the header background */
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  width: 100%;
-  margin-top: 50px; /* Add some space before the footer */
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #333;
 }
 
-footer .social-media {
+.footer-container {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 30px; /* Add more space between the social icons */
+  align-items: center;
+  text-align: center;
+}
+
+.logo-section .footer-logo {
+  width: 300px;
   margin-bottom: 10px;
 }
 
-footer .social-media a {
-  color: #fff;
-  font-size: 2rem; /* Increase the size of the icons */
+.footer-section h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
   text-decoration: none;
-  transition: color 0.3s ease;
+  color: #333;
+}
+
+.footer-section ul li a:hover {
+  color: #ff5a00;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.social-icon i {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.social-icon i:hover {
+  color: #ff5a00;
+}
+
+.payment-img {
+  width: 150px; /* Adjust the size of the payment methods image */
+  margin-top: 10px;
+}
+
+footer img {
+  max-width: 100%;
+}
+
+/* ============================ */
+/* Estilos para la sección "Sobre Nosotros" actualizada */
+/* ============================ */
+
+#second-section {
+  padding: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.second-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.second-image img {
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.second-text {
+  max-width: 600px;
+  padding-left: 30px;
+}
+
+.second-text h2,
+.second-text h3 {
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.second-text p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#hero {
+  padding: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer .social-media a:hover {
-  color: #129e30; /* Hover effect to match menu */
+  color: #129e30;
 }
 
 footer p {
@@ -351,6 +500,230 @@ footer p {
   opacity: 0.9;
 }
 
+/* ============================ */
+/* Estilos para la sección del equipo */
+/* ============================ */
+#team-section {
+  background-color: #0033a1;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.team-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.team-intro p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+.team-intro h3 {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.team-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.team-photo {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  clip-path: url(#heart-shape); /* Applying the heart shape */
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Heart Shape using SVG */
+svg {
+  display: none;
+}
+
+#heart-shape {
+  clip-path: path(
+    "M0.5,0.25 C0.5,0.1 0.7,-0.02 1,0.25 C1.3,-0.02 1.5,0.1 1.5,0.25 C1.5,0.6 1,1 0.5,1 C0,1 0.5,0.6 0.5,0.25"
+  );
+}
+
+/* ============================ */
+/*        Contactanos           */
+/* ============================ */
+
+  /* Fondo azul claro y texto negro */
+  .store-section {
+    background-color: #e6f2ff; /* Azul claro */
+    color: black; /* Texto negro */
+    padding: 20px;
+  }
+
+  .store-text h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .store-text p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  /* Ajuste del mapa 3 cm más abajo */
+  .store-map {
+    margin-top: 30px; /* 3 cm es aproximadamente 30px */
+  }
+
+  /* Estilo del botón */
+  .map-button .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #f56b2a, #ff8a50); /* Gradiente de colores */
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    border-radius: 30px; /* Botón redondeado */
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  }
+  
+  .map-button .btn:hover {
+    background: linear-gradient(135deg, #d55a1e, #f56b2a); /* Cambiar gradiente en hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+  }
+
+
+  /* ============================ */
+/*        Servicios         */
+/* ============================ */
+
+.services-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space items evenly */
+  height: 380px; /* Increased height to fit all elements */
+}
+
+.service-card:hover {
+  border: 2px solid #007bff;
+  transform: translateY(-5px);
+}
+
+.service-icon img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.service-label {
+  background-color: #f1f1f1;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.service-price p {
+  font-size: 14px;
+  color: #333;
+}
+
+.service-price strong {
+  font-size: 18px;
+  color: #007bff;
+}
+
+/* Input Style */
+.weight-input, .article-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Price Output Style */
+.price-output {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0; /* Add margin for spacing */
+}
+
+/* Button Style */
+.calculate-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: auto; /* Push button to the bottom */
+  transition: background-color 0.3s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+/* ============================ */
+/* 11. Animaciones */
+/* ============================ */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -362,7 +735,6 @@ footer p {
   }
 }
 
-/* Animación de las burbujas */
 @keyframes rise {
   0% {
     transform: translateY(0);
@@ -374,19 +746,21 @@ footer p {
   }
 }
 
-/* Estilos Responsive para móviles */
+/* ============================ */
+/* 12. Estilos Responsivos */
+/* ============================ */
+/* Pantallas de 768px o menos */
 @media (max-width: 768px) {
   body {
     padding-top: 70px;
   }
 
-  /* Header centrado en móviles */
   header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto; /* Ajusta la altura del header si es necesario */
-    flex-direction: column; /* Apila el logo y el menú hamburguesa */
+    height: auto;
+    flex-direction: column;
     padding: 0;
   }
 
@@ -394,16 +768,15 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Asegura que el contenedor del logo ocupe todo el ancho */
+    width: 100%;
   }
 
   .logo img {
-    width: 300px !important; /* Forzamos el ancho del logo a 350px */
-    max-width: 48% !important; /* Aseguramos que ocupe el 100% si es necesario */
-    height: auto !important; /* Mantenemos la proporción del logo */
+    width: 300px !important;
+    max-width: 48% !important;
+    height: auto !important;
   }
 
-  /* Aseguramos que el menú hamburguesa esté alineado a la derecha */
   .menu-toggle {
     position: absolute;
     top: 10px;
@@ -412,7 +785,6 @@ footer p {
     z-index: 101;
   }
 
-  /* Menú hamburguesa centrado cuando está activo */
   nav ul {
     display: none;
     flex-direction: column;
@@ -454,15 +826,53 @@ footer p {
   #second-section p {
     font-size: 1.1rem;
   }
+
+  .services-section {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    margin-bottom: 20px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .faq-answer {
+    padding: 0 10px;
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;
+  }
+
+  .faq h2 {
+    font-size: 1.8rem;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+
+  footer .social-media a {
+    font-size: 1.5rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
 }
 
+/* Pantallas de 480px o menos */
 @media (max-width: 480px) {
   header {
     height: 60px;
   }
 
   .logo img {
-    width: 70px; /* Tamaño más pequeño para móviles */
+    width: 70px;
   }
 
   nav ul li a {
@@ -471,7 +881,7 @@ footer p {
   }
 
   #hero .animate-text {
-    font-size: 1.8rem; /* Ajustamos aún más el tamaño en pantallas pequeñas */
+    font-size: 1.8rem;
   }
 
   #hero p {
@@ -486,72 +896,164 @@ footer p {
     font-size: 0.9rem;
   }
 
-  /* Footer Responsive Styles */
-  @media (max-width: 768px) {
-    footer {
-      padding: 15px 0;
-    }
-
-    footer .social-media a {
-      font-size: 1.5rem; /* Smaller icons for mobile */
-    }
-
-    footer p {
-      font-size: 0.9rem;
-    }
+  .faq-section {
+    padding: 10px;
   }
 
-  /* Responsivo para pantallas más pequeñas de las tarjetas 2 parte*/
+  .faq-question {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .faq-answer p {
+    font-size: 0.8rem;
+  }
+
+  .faq h2 {
+    font-size: 1.5rem;
+  }
+
+  /* ============================   */
+  /*        Responsividad          */
+  /* ============================ */
   @media (max-width: 768px) {
-    .services-section {
-      grid-template-columns: 1fr; /* Colocar las tarjetas en una sola columna */
+    #hero {
+      padding: 30px;
     }
 
-    .service-card {
+    .hero-container {
+      flex-direction: column;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .second-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .second-image img {
+      width: 100%;
       margin-bottom: 20px;
     }
-  }
-  /* Responsivo para pantallas más pequeñas de las tarjetas 3 parte*/
-  @media (max-width: 768px) {
-    .faq-section {
-      padding: 20px;
+
+    .second-text {
+      padding-left: 0;
     }
 
-    .faq-question {
-      font-size: 1rem; /* Reducir tamaño de texto de la pregunta */
-      padding: 10px;
+    .team-intro h2 {
+      font-size: 2rem;
     }
 
-    .faq-answer {
-      padding: 0 10px; /* Ajuste del padding de la respuesta */
-    }
-
-    .faq-answer p {
-      font-size: 0.9rem; /* Reducir tamaño de texto de la respuesta */
-    }
-
-    .faq h2 {
-      font-size: 1.8rem; /* Ajustar el tamaño del título en móviles */
+    .team-intro p {
+      font-size: 1rem;
     }
   }
+}
 
-  /* Para pantallas aún más pequeñas */
-  @media (max-width: 480px) {
-    .faq-section {
-      padding: 10px;
-    }
+/* ============================ */
+/* Responsive CSS for all devices */
+/* ============================ */
 
-    .faq-question {
-      font-size: 0.9rem; /* Aún más pequeño en pantallas muy pequeñas */
-      padding: 8px;
-    }
+/* Large screens (Desktops > 1200px) */
+@media (min-width: 1200px) {
+  .footer-section {
+    width: 22%;
+  }
+}
 
-    .faq-answer p {
-      font-size: 0.8rem;
-    }
+/* Medium screens (Tablets and small desktops, 768px to 1200px) */
+@media (max-width: 1200px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-    .faq h2 {
-      font-size: 1.5rem; /* Ajuste del título */
-    }
+  .footer-section {
+    width: 30%; /* Expand section width for smaller desktops and tablets */
+    margin-bottom: 20px;
+  }
+
+  .logo-section .footer-logo {
+    width: 250px; /* Reduce logo size */
+  }
+
+  .payment-img {
+    width: 130px; /* Adjust the size of the payment methods image */
+  }
+
+  .social-icon i {
+    font-size: 22px; /* Adjust icon size */
+  }
+}
+
+/* Small screens (Tablets, 480px to 768px) */
+@media (max-width: 768px) {
+  footer {
+    padding: 30px 15px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 100%; /* Full width for smaller screens */
+    text-align: center;
+  }
+
+  .footer-section ul {
+    text-align: center;
+  }
+
+  .logo-section .footer-logo {
+    width: 200px; /* Further reduce logo size */
+  }
+
+  .footer-section h4 {
+    font-size: 14px;
+  }
+
+  .payment-img {
+    width: 120px;
+  }
+
+  .social-icon i {
+    font-size: 20px; /* Smaller icons */
+  }
+}
+
+/* Extra small screens (Mobile phones < 480px) */
+@media (max-width: 480px) {
+  footer {
+    padding: 20px 10px;
+  }
+
+  .footer-section h4 {
+    font-size: 13px;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 6px;
+  }
+
+  .logo-section .footer-logo {
+    width: 150px; /* Reduce logo size for mobile */
+  }
+
+  .payment-img {
+    width: 100px; /* Smaller payment methods image for mobile */
+  }
+
+  .social-icon i {
+    font-size: 18px; /* Even smaller icons for mobile */
   }
 }

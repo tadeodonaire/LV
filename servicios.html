@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lavandería Industrial - Nosotros</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <!-- Add icon library for the social media buttons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="assets/image/logo.png" alt="Logo Lavandería Industrial" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <!-- priemro -->
+    <section
+      id="pricing"
+      style="
+        background-color: #055dc293;
+        padding: 150px 0;
+        color: white;
+        text-align: center;
+      "
+    >
+      <div class="container">
+        <h2 style="font-size: 36px; font-weight: bold">Precios sencillos</h2>
+        <p style="font-size: 18px; margin-bottom: 100px">Sin gastos ocultos.</p>
+
+        <div
+          class="features"
+          style="
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: white;
+            background-color: #2f1c93;
+            padding: 20px;
+          "
+        >
+          <div class="feature-item" style="display: flex; align-items: center">
+            <img
+              src="assets/icons/delivery.png"
+              alt="Entrega en 24h"
+              style="width: 40px; margin-right: 10px"
+            />
+            <span>Entrega gratuita en 24h</span>
+          </div>
+          <div class="feature-item" style="display: flex; align-items: center">
+            <img
+              src="assets/icons/minimum-order.png"
+              alt="Pedido mínimo"
+              style="width: 40px; margin-right: 10px"
+            />
+            <span>S/25 pedido mínimo</span>
+          </div>
+          <div class="feature-item" style="display: flex; align-items: center">
+            <img
+              src="assets/icons/service-fee.png"
+              alt="Servicio"
+              style="width: 40px; margin-right: 10px"
+            />
+            <span>Comisión de servicio de S/4.95</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <!-- First Card -->
+            <div class="service-card highlighted">
+                <div class="service-icon">
+                    <img src="assets/icons/lavado-al-peso.png" alt="Lavado al peso">
+                </div>
+                <h3>Lavado al peso</h3>
+                <p>Para el lavado diario de ropa, sábanas y toallas.</p>
+                <div class="service-label">lavado + secado + en una bolsa</div>
+                <div class="service-price">
+                    <p><strong>PRECIO POR PESO</strong></p>
+                    <p>desde <strong>S/ 28.32</strong> /6kg</p>
+                </div>
+                <input type="number" class="weight-input" placeholder="Ingrese peso (kg)" min="1">
+                <button class="calculate-btn">Calcular Precio</button>
+                <div class="price-output">Precio: <strong class="calculated-price">S/ 0.00</strong></div>
+            </div>
+            
+            <!-- Second Card -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="assets/icons/lavado-y-planchado.png" alt="Lavado y Planchado">
+                </div>
+                <h3>Lavado y Planchado</h3>
+                <p>Para ropa diaria que requiere planchado.</p>
+                <div class="service-label">lavado + secado + planchado + colgado</div>
+                <div class="service-price">
+                    <p><strong>PRECIO POR ARTÍCULO</strong></p>
+                    <p>desde <strong>S/ 3</strong></p>
+                </div>
+                <input type="number" class="article-input" placeholder="Ingrese cantidad" min="1">
+                <button class="calculate-btn">Calcular Precio</button>
+                <div class="price-output">Precio: <strong class="calculated-price">S/ 0.00</strong></div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <img src="assets/image/logo.png" alt="Logo" class="footer-logo" />
+          <p>Conéctate con nosotros</p>
+          <div class="social-media">
+            <a
+              href="mailto:youremail@example.com"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a
+              href="https://wa.me/yourwhatsappnumber"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Nuestros Productos</h4>
+          <ul>
+            <li><a href="#">opcion</a></li>
+            <li><a href="#">opcion</a></li>
+            <li><a href="#">opcion</a></li>
+            <li><a href="#">opcion</a></li>
+            <li><a href="#">opcion</a></li>
+            <li><a href="#">opcion</a></li>
+            <li><a href="#">opcion</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#">opcion 1</a></li>
+            <li><a href="#">opcion 2</a></li>
+            <li><a href="#">opcion 3</a></li>
+            <li><a href="#">opcion 4</a></li>
+          </ul>
+        </div>
+        <div class="footer-section help-section">
+          <h4>Métodos de Pago</h4>
+          <img
+            src="assets/image/payment-methods.png"
+            alt="Métodos de Pago"
+            class="payment-img"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/scripts/script.js"></script>
+    </script>
+  </body>
+</html>
