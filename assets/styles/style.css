@@ -108,16 +108,16 @@ nav ul li a:hover {
   color: rgb(24, 59, 161);
 }
 
+#hero .animate-text {
+  font-size: 6rem;
+  animation: fadeInUp 2s ease forwards;
+  opacity: 0;
+}
 #hero .animate-text1 {
   font-size: 3.5rem;
   animation: fadeInUp 2s ease forwards;
   opacity: 0;
   color: red
-}
-#hero .animate-text {
-  font-size: 6rem;
-  animation: fadeInUp 2s ease forwards;
-  opacity: 0;
 }
 
 #hero p {
